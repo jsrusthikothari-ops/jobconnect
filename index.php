@@ -1,0 +1,14 @@
+<?php require 'config.php'; $pageTitle='Find your next opportunity'; require 'includes/header.php'; ?>
+<section class="hero"><div class="hero-copy"><span class="pill"><span class="dot"></span> Your next opportunity starts here</span>
+<h1>Work that fits <em>your future.</em></h1><p>Meet the right people, discover meaningful roles, and take the next step in your career — all in one place.</p>
+<form class="search-bar" action="jobs.php" method="get"><span>⌕</span><input name="q" placeholder="Job title, skill or company"><input name="location" placeholder="Location"><button class="btn btn-primary">Search jobs →</button></form>
+<div class="hero-meta"><span>✓ Profiles that show your potential</span><span>✓ Simple job discovery</span></div></div>
+<div class="hero-art"><div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div><div class="floating-card card-top"><span class="mini-icon purple">✦</span><div><b>Find your fit</b><small>Opportunities picked for you</small></div></div>
+<div class="profile-illustration"><div class="profile-head"></div><div class="profile-body"></div><span class="spark spark-one">✦</span><span class="spark spark-two">✧</span></div>
+<div class="floating-card card-bottom"><span class="mini-icon green">✓</span><div><b>Good things ahead</b><small>Your next chapter awaits</small></div></div></div></section>
+<section class="stats"><div><strong>One profile</strong><span>for your career story</span></div><div><strong>Two pathways</strong><span>job seeker or employer</span></div><div><strong>More clarity</strong><span>from discovery to interview</span></div></section>
+<section class="section"><div class="section-heading"><div><span class="eyebrow">EXPLORE OPPORTUNITIES</span><h2>Roles worth a closer look</h2></div><a class="text-link" href="jobs.php">View all jobs →</a></div><div class="job-grid">
+<?php foreach (array_slice(demo_jobs(),0,3) as $job): ?><article class="job-card"><div class="job-card-top"><span class="company-avatar"><?= e(substr($job['company'],0,1)) ?></span><span class="tag"><?= e($job['type']) ?></span></div><h3><?= e($job['title']) ?></h3><p class="company-name"><?= e($job['company']) ?></p><p class="muted">⌖ <?= e($job['location']) ?></p><p class="salary"><?= e($job['salary']) ?></p><div class="tag-row"><?php foreach($job['tags'] as $tag): ?><span class="tag"><?= e($tag) ?></span><?php endforeach; ?></div><a class="card-link" href="job-detail.php?id=<?= e($job['id']) ?>">View details <span>→</span></a></article><?php endforeach; ?>
+</div></section>
+<section class="cta-band"><div><span class="eyebrow">READY WHEN YOU ARE</span><h2>Your next chapter could start today.</h2><p>Create a profile to explore jobs or find candidates.</p></div><a class="btn btn-light" href="onboarding.php">Create your profile →</a></section>
+<?php require 'includes/footer.php'; ?>

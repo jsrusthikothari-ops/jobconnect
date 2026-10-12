@@ -1,0 +1,1 @@
+</main><footer class="footer"><div class="brand"><span class="brand-icon">J</span> JobConnect</div><p>Find the work that fits. Meet the people who move you forward.</p><span>© <?= date('Y') ?> JobConnect · Student project UI demo</span></footer></body></html>
