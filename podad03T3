@@ -1,0 +1,49 @@
+db.products.insertMany([
+	{
+		product_id:101,
+		product_name:"Iphone",
+		product_category:"phone,
+		product_Price:50000,
+		Product_Stock:50,
+		product_supplier:"ABC TRADERS"
+	},
+	
+	
+	{
+		product_id:102,
+		product_name:"Mac",
+		product_category:"Laptop,
+		product_Price:890000,
+		Product_Stock:30,
+		product_supplier:"ACC TRADERS"
+	},
+	{
+		product_id:103,
+		product_name:"Samsung",
+		product_category:"phone,
+		product_Price:40000,
+		Product_Stock:70,
+		product_supplier:"ABC TRADERS"
+	},
+	
+	{
+		product_id:104,
+		product_name:"C-type Cable",
+		product_category:"Mobile Accessories,
+		product_Price:500,
+		Product_Stock:100,
+		product_supplier:"BBC TRADERS"
+	},
+	
+	{
+		product_id:105,
+		product_name:"Iphone",
+		product_category:"phone,
+		product_Price:90000,
+		Product_Stock:20,
+		product_supplier:"BBC TRADERS"
+	},
+	])
+
+	db.products.find({supplier:"ABC"},{product_name:1,product_category:1,product_price:1,product_id:0});
+	db.products.find({product_name:/^M/});
